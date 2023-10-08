@@ -52,7 +52,7 @@
   --ion-color-danger-tint: #ed576b;
 
   /** dark **/
-  --ion-color-dark: #222428;
+  --ion-color-dark: black;
   --ion-color-dark-rgb: 34, 36, 40;
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
@@ -72,9 +72,15 @@
   --ion-color-light-rgb: 255, 255, 255;
   --ion-color-light-contrast: #AB95F9;
   --ion-color-light-contrast-rgb: 171, 149, 249;
-  --ion-color-light-shade: #AB95F9;
+  --ion-color-light-shade: #ab95f97d;
   --ion-color-light-tint: #AB95F9;
 }
 
 $colorPrimary: var( --ion-color-primary);
 $colorLight: var(--ion-color-light);
+$colorDark: var(--ion-color-dark);
+
+
+.eu-color-black{
+  color:  $colorDark
+}
