@@ -37,7 +37,6 @@ ion-content {
   .bottom-card {
     --background: none;
     max-width: 800px;
-    margin-bottom: 80px;
     h1,
     h3,
     h4 {
@@ -70,8 +69,16 @@ ion-content {
   width: 100%;
   padding: 80px 64px;
 
+  .mobile-view-footer {
+    display: none;
+  }
   .line {
     border: 1px solid black;
+  }
+  ion-button{
+    height: 56px;
+    width: 100%;
+
   }
 
   .links-container {
@@ -97,6 +104,9 @@ ion-content {
 
   .footer {
     padding: 30px ;
+    .mobile-view-footer {
+      display: block;
+    }
   }
 
   .copy-right {

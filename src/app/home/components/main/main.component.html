@@ -1,4 +1,4 @@
-<app-header>
+<app-header [hideBackButton]="true">
 
 </app-header>
 <ion-content [fullscreen]="true" class="ion-text-center">
@@ -6,7 +6,7 @@
     <h1 class="main-text font-bold">Discover the magic of our surprise box</h1>
     <p class="main-sub-text">Unleash your child's curiosity with our educational subscription box filled with fun
       and learning.</p>
-    <ion-button color="light" routerLink="subscription">
+    <ion-button class="primary-button" color="light" routerLink="subscription">
       Subscribe Now
     </ion-button>
   </ion-card>
@@ -50,22 +50,43 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-button color="light" >
+    <ion-button class="primary-button" color="light"  routerLink="subscription">
       Subscribe Now
     </ion-button>
 
   </div>
-  <div class="footer ">
+  <div class="footer">
+    <div class="mobile-view-footer">
+      <ion-row class="eu-mb-6 ion-text-left  d-flex flex-direction-column">
+        <ion-icon class="eu-font-size-16" src="./assets/icon/svg/logo-black.svg"></ion-icon>
+        <h2 class="eu-font-size-4 font-light-bold" *ngFor="let link of footerLinks">
+          <a class="eu-color-black" [href]="link.url"> {{link.text}}</a>
+        </h2>
+      </ion-row>
+  
+      <ion-row class="eu-mb-6 ion-text-left ">
+        <h1 class="eu-font-size-4 eu-mb-2">
+          Subscribe
+        </h1>
+        <ion-input class="eu-mb-2" mode="md"  fill="outline" placeholder="Enter your email"></ion-input>
+        <ion-button mode="md" fill="outline" expand="block" class="eu-font-size-4 ion-no-margin" > Subscribe</ion-button>
+        <p class="eu-font-size-3">
+          By subscribing you agree to with our  <u>
+            Privacy Policy
+          </u>
+        </p>
+      </ion-row>
+    </div>
     <div class="line"></div>
     <ion-row class="links-container ion-justify-content-between ion-align-items-center">
       <ion-col size-lg="1" size-md="1" size="12">
-        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="../" class="footer-link">Privacy Policy</a>
       </ion-col>
       <ion-col size-lg="1.5" size-md="1" size="12">
-        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="../" class="footer-link">Terms of Service</a>
       </ion-col>
       <ion-col size-lg="1.5" size-md="1" size="12">
-        <a href="#" class="footer-link">Cookies Settings</a>
+        <a href="../" class="footer-link">Cookies Settings</a>
       </ion-col>
       <ion-col class="copy-right ion-text-right" size-lg="7.5" size-md="9" size="12">
         © 2023 MyEdu. All rights reserved.

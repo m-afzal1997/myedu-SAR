@@ -57,6 +57,9 @@ ion-item {
 .font-bold {
     font-weight: 900;
 }
+.font-light-bold {
+    font-weight: 600;
+}
 
 * {
     font-family: Nunito;
@@ -76,7 +79,7 @@ p {
     font-size: 18px;
 }
 
-ion-button {
+.primary-button {
     --box-shadow: 4px 4px 0px -1px #896AF9;
     ;
     height: 65px;
@@ -87,11 +90,15 @@ ion-button {
     --border-radius: 24px;
     --border-color: #896AF9;
     --border-style: solid;
-    --border-width: 1px;
 
     &:hover {
         --box-shadow: 0px 0px 0px 0px #896AF9;
     }
+}
+
+ion-button {
+    --border-width: 1px;
+    text-transform: none;
 }
 
 @for $i from 1 through 12 {
@@ -218,7 +225,7 @@ ion-button {
         border: $basePx solid #D1C5FB;
     }
 }
-@for $i from 1 through 12 {
+@for $i from 1 through 20 {
     $basePx: 4px * $i;
 
     .eu-font-size-#{$i} {
