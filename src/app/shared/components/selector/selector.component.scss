@@ -1,0 +1,31 @@
+.selector-container {
+    margin: 24px 0px 24px 0px;
+}
+
+h2 {
+    color: #202124;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 0px 0px 8px 0px;
+}
+
+ion-select {
+    border-radius: 8px;
+    border: 1px solid rgba(208, 213, 221, 0.9764705882);
+    width: 100%;
+    --padding-start: 14px;
+    --padding-end: 14px;
+    font-size: 16px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    --highlight-color-focused: #896AF9;
+    --highlight-color-valid: #896AF9;
+
+    &::part(container) {
+        width: 100%;
+    }
+}

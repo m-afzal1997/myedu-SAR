@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { MainComponent } from './components/main/main.component';
+import { SharedModule } from '../shared/shared.module';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
-  declarations: [HomePage]
+  imports: [SharedModule, HomePageRoutingModule, FormsModule],
+  declarations: [MainComponent, SubscriptionComponent],
 })
 export class HomePageModule {}

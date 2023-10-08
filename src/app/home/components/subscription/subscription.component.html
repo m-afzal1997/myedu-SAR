@@ -1,0 +1,106 @@
+<app-header>
+  
+</app-header>
+<ion-content class="ion-padding">
+
+  <ion-card class="main eu-mt-10 eu-mb-6 eu-border-r-10 eu-mx-auto eu-primary-border-2">
+    <ion-row>
+      <ion-col class="address-section eu-p-4" size="12" size-lg="8" size-md="8" size-xs="12">
+        <h1 class="eu-font-size-6">Subscribe</h1>
+        <p>to our Monthly Surprise Box</p>
+        <div class="eu-my-2 eu-primary-border-1"></div>
+        <h1 class="eu-font-size-5">Contact Information</h1>
+        <app-input [label]="'Your Name'" [placeholder]="'e.g Osama Alshathri'"></app-input>
+        <app-input [label]="'Email'" [placeholder]="'Osama@gmail.com'"></app-input>
+        <h1 class="eu-font-size-6">Child’s Information</h1>
+        <app-input [label]="'Child’s Full Name'" [placeholder]="'e.g Sarah Mohammad'"></app-input>
+        <ion-label>
+          <h2 class="selector-label">Child’s Date of Birth</h2>
+        </ion-label>
+        <ion-row>
+          <ion-col size="4" class="col-no-padding">
+            <app-selector [placeholder]="'Date'" [options]="dob.day"></app-selector>
+          </ion-col>
+          <ion-col size="4" class="col-no-padding">
+            <app-selector [placeholder]="'Month'" [options]="dob.month"></app-selector>
+          </ion-col>
+          <ion-col size="4" class="col-no-padding">
+            <app-selector [placeholder]="'Year'" [options]="dob.year"></app-selector>
+          </ion-col>
+        </ion-row>
+        <ion-row class="eu-my-3 d-flex flex-direction-column ">
+          <ion-label>
+            <h2 class="selector-label">Grade</h2>
+          </ion-label>
+          <app-selector [placeholder]="'e.g Grade 2'" [options]="['A','B']"></app-selector>
+        </ion-row>
+        <ion-label>
+          <h2 class="selector-label">Gender</h2>
+        </ion-label>
+        <ion-row>
+          <ion-col class="ion-no-padding" size="6" *ngFor="let gender of genders; first as isFirst" (click)="selectGender(gender)">
+            <ion-card class="gender-card eu-box-shadow eu-border-r-10  d-flex ion-justify-content-between" [class.eu-mr-1]="isFirst" [class.selected]="selectedGender === gender">
+              <ion-label>
+                <p class="gender-text">{{gender}}</p>
+              </ion-label>
+              <ion-icon [name]="selectedGender === gender ? 'checkmark-circle' : 'checkmark-circle-outline'" size="small"></ion-icon>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <h1  class="eu-mt-4 eu-mb-1">As a parent select any 3 topics</h1>
+        <ion-row>
+          <ion-col size-lg="2" size="4" *ngFor="let topic of topics" (click)="selectTopic(topic)">
+            <ion-card class="topic-chip eu-box-shadow eu-border-r-48 ion-text-center d-flex ion-justify-content-center ion-align-items-center" [class.selected]="selectedTopic.includes(topic)">
+              {{topic}}
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <div class="bottom-button eu-mt-9">
+          <ion-button size="large" color="light" expand="block">
+            Continue to payment
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col class="product-section eu-p-4" size="12" size-lg="4" size-md="4" size-xs="12">
+        <h1 class="eu-font-size-6">Summary</h1>
+        <p>of your Monthly Surprise Box</p>
+        <ion-card class="product-card eu-border-r-10 eu-px-2 eu-pt-2 eu-pb-5 eu-my-3">
+          <ion-row>
+            <ion-col size="6">
+              <h4><b>Mystery</b></h4>
+              <p>x1</p>
+            </ion-col>
+            <ion-col size="6" class="ion-text-right">
+              <h4>SAR <b>456</b></h4>
+              <p>Monthly</p>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+
+        <ion-grid class="cost-detail">
+          <ion-row>
+            <ion-col size="6" class="ion-text-left">
+              <h5>Subtotal</h5>
+              <h5>Shipping</h5>
+              <h5>Taxes</h5>
+            </ion-col>
+            <ion-col size="6" class="ion-text-right">
+              <h5>SAR <b>456</b></h5>
+              <p>Free</p>
+              <h5>SAR <b>4.0</b></h5>
+            </ion-col>
+          </ion-row>
+          <div class="eu-my-2 eu-primary-border-1"></div>
+          <ion-row>
+            <ion-col size="6" class="ion-text-left">
+              <h4><b>Total</b></h4>
+            </ion-col>
+            <ion-col size="6" class="ion-text-right">
+              <h5>SAR <b>460</b></h5>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

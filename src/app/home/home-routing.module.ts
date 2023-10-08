@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import { MainComponent } from './components/main/main.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    component: MainComponent,
+  },
+  {
+    path: 'subscription',
+    component: SubscriptionComponent
   }
 ];
 

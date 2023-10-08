@@ -1,0 +1,106 @@
+ion-content {
+  --background: var(--ion-color-primary);
+}
+
+.main-text-container {
+  --background: var(--ion-color-primary);
+  max-width: 804px;
+  min-width: 320px;
+  margin: 0 auto;
+  color: #FFF;
+
+  .main-text {
+    text-shadow: 2px 2px 0px #896AF9;
+    font-size: 54px;
+  }
+
+  .main-sub-text {
+    font-size: 22px;
+  }
+}
+
+.main-card-img {
+  width: 100%;
+  margin: 0px;
+  --background: none;
+  padding: 80px 128px;
+  ion-img {
+    width: 100%;
+  }
+}
+
+.bottom-container {
+  background: #FFF9E6 url("../../../../assets/img/Group.png") no-repeat fixed center;
+  background-size: 100% 100%;
+  padding: 112px 64px;
+
+  .bottom-card {
+    --background: none;
+    max-width: 800px;
+    margin-bottom: 80px;
+    h1,
+    h3,
+    h4 {
+      color: black;
+    }
+  }
+
+  .bottom-h1 {
+    font-size: 48px;
+  }
+}
+
+.bottom-cards {
+  --background: none;
+
+  .bottom-card-img {
+    width: 70px;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  p {
+    color: black;
+  }
+}
+
+.footer {
+  background-color: white;
+  width: 100%;
+  padding: 80px 64px;
+
+  .line {
+    border: 1px solid black;
+  }
+
+  .links-container {
+    .footer-link {
+      color: black;
+      display: flex;
+    }
+  }
+
+}
+
+@media only screen and (max-device-width: 750px) {
+
+  .main-card-img {
+    padding: 54px 16px
+  }
+
+  .bottom-container {
+    background-image: none;
+    padding: 56px 16px;
+    gap: 24px;
+  }
+
+  .footer {
+    padding: 30px ;
+  }
+
+  .copy-right {
+    text-align: left !important;
+    margin: 0px;
+  }
+}
