@@ -24,3 +24,71 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: Nunito;
+    src: url(./assets/fonts/Nunito-Variable.ttf);
+}
+
+* {
+    font-family: Nunito;
+}
+
+ion-card {
+    margin: 0px;
+}
+
+ion-col {
+    padding: 5px;
+}
+
+ion-item {
+    --background: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.font-bold {
+    font-weight: 900;
+}
+
+* {
+    font-family: Nunito;
+}
+
+ion-card {
+    box-shadow: none;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  ion-button {
+    --box-shadow: 4px 4px 0px -1px #896AF9;;
+    height: 65px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+  
+    --border-radius: 24px;
+    --border-color: #896AF9;
+    --border-style: solid;
+    --border-width: 1px;
+  
+    &:hover {
+      --box-shadow: 0px 0px 0px 0px #896AF9;
+    }
+  }

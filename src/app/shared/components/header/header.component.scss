@@ -1,0 +1,20 @@
+ion-header {
+    background-color: var(--ion-color-primary);
+    height: 96px;
+    padding: 0px 110px;
+
+    ion-title {
+        font-size: 24px;
+
+        ion-icon {
+            font-size: 64px;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 750px) {
+    ion-header {
+        padding: 0px 16px;
+        height: 72px;
+    }
+}

@@ -1,0 +1,75 @@
+<app-header>
+
+</app-header>
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <ion-card class="main-text-container ion-padding">
+    <h1 class="main-text font-bold">Discover the magic of our surprise box</h1>
+    <p class="main-sub-text">Unleash your child's curiosity with our educational subscription box filled with fun
+      and learning.</p>
+    <ion-button color="light" (click)="goToSubscription()">
+      Subscribe Now
+    </ion-button>
+  </ion-card>
+  <ion-card class="main-card-img ion-padding">
+    <ion-img src="./assets/icon/svg/magicBox-Card.svg"></ion-img>
+  </ion-card>
+  <div class="bottom-container d-flex ion-align-items-center flex-direction-column">
+
+    <ion-card class="bottom-card">
+      <ion-text>
+        <h3>Discover</h3>
+      </ion-text>
+      <ion-text>
+        <h1 class="font-bold">How It Works: Subscribe and Receive Your Surprise Box</h1>
+      </ion-text>
+      <ion-text>
+        <h4>Subscribe to our surprise subscription box and give your child the gift of learning. Each month, we
+          curate
+          a
+          box filled with educational materials tailored to your child's age and interests.</h4>
+      </ion-text>
+    </ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="4" size-md="4" size="12" *ngFor="let card of cards; let i=index">
+          <ion-card class="bottom-cards ion-text-center">
+            <ion-img [src]="card.img" class="bottom-card-img"></ion-img>
+            <ion-card-header>
+              <ion-card-title>
+                <h2>Step {{i+1}}:</h2>
+                <h1>
+                  {{card.title}}
+                </h1>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{card.description}}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button color="light" (click)="goToSubscription()">
+      Subscribe Now
+    </ion-button>
+
+  </div>
+  <div class="footer ">
+    <div class="line"></div>
+    <ion-row class="links-container ion-justify-content-between ion-align-items-center">
+      <ion-col size-lg="1" size-md="1" size="12">
+        <a href="#" class="footer-link">Privacy Policy</a>
+      </ion-col>
+      <ion-col size-lg="1.5" size-md="1" size="12">
+        <a href="#" class="footer-link">Terms of Service</a>
+      </ion-col>
+      <ion-col size-lg="1.5" size-md="1" size="12">
+        <a href="#" class="footer-link">Cookies Settings</a>
+      </ion-col>
+      <ion-col class="copy-right ion-text-right" size-lg="7.5" size-md="9" size="12">
+        © 2023 MyEdu. All rights reserved.
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
