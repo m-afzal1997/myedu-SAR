@@ -15,8 +15,5 @@ export class MainComponent  {
     { img: 'assets/icon/svg/surprise.svg', title: 'Receive Your Surprise Box', description: 'Sit back and relax as your child eagerly awaits the arrival of their monthly surprise box filled with engaging learning materials.' }
   ];
   public constructor(private router: Router) { }
-  public goToSubscription(): void {
-    this.router.navigate(['subscription']);
-  }
 
 }

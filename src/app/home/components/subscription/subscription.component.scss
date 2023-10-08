@@ -1,0 +1,95 @@
+ion-content {
+    --background: url('../../../../assets//img/subscription-bg.png');
+    background-size: cover;
+
+    .main {
+        max-width: 62rem;
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            color: #202124;
+        }
+
+        .selector-label {
+            color: black;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .gender-card {
+            height: 44px;
+            border: 1px solid rgba(208, 213, 221, 0.9764705882);
+            padding: 10px 14px;
+            
+            .gender-text {
+                color: #a2a6ae !important;
+            }
+        }
+
+
+
+        .topic-chip {
+            border: 1px solid rgba(208, 213, 221, 0.9764705882);
+            height: 32px;
+            cursor: pointer;
+        }
+
+        .selected {
+            border: 1px solid #896AF9;
+            color: #896AF9;
+            --background: #F4F1FE;
+
+            ion-icon {
+                color: #896AF9 !important;
+            }
+
+            .gender-text {
+                color: #896AF9 !important;
+            }
+        }
+    }
+
+    .product-section {
+        background-color: #F1EDFE;
+
+        h1 {
+            color: #202124;
+        }
+
+        .product-card {
+
+            h1,
+            h4,
+            p {
+                margin: 0px;
+                color: #202124;
+                font-size: 16px;
+            }
+
+            p {
+                color: #a2a6ae;
+                font-size: 12px;
+            }
+        }
+        .cost-detail {
+            color: #202124;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 750px) {
+    ion-content {
+        --background: url('../../../..//assets/icon/svg/subscription-mobile-bg.svg');
+        background-size: cover;
+
+        .main {
+            margin-top: 30px !important;
+
+            .bottom-button {
+                margin-top: 30px !important
+            }
+        }
+    }
+}
